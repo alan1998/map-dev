@@ -15,4 +15,8 @@ export class AppComponent {
     //Get heading from map 
     let h = this.mapView.getHeading();
   }
+
+  onInitMap(){
+    this.mapView.initOnLocation(-1.28,51.7,false);
+  }
 }
