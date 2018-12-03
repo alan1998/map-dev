@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,NgModule,ViewChild } from '@angular/core';
+import { MapCompComponent } from './map-comp/map-comp.component';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  @ViewChild(MapCompComponent) mapView:MapCompComponent;
+
   title = 'map2';
+  onRotate(){
+    //Get heading from map 
+    let h = this.mapView.getHeading();
+  }
 }

@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+.top {
+    border:1px solid aqua;
+    border-width: 1px;
+    width:300px;
+    height:300px;
+}
+.comp {
+    border:1px solid rgb(123, 5, 153);
+    width:300px;
+    height:300px;
+}
+
+html, body {
+    box-sizing: border-box;
+    background-color: #20262e;
+    height: 100%;
+    padding: 10px;
+    margin: 0px;
+    color: aliceblue
+}
+
+.my-container > div {
+    display: flex;
+    align-items: center;
+  }
+  
+.my-container {
+    height:100%;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 40px auto ;
+    grid-gap: 3px;
+}
+
+.my-header {
+    grid-column: 1 / -1;
+    justify-content: center;
+}
+
+.my-side {
+    grid-column: 1 / 5;
+    border:1px solid rgb(13, 179, 230);
+}
+
+.my-content {
+    grid-column: 5 / -1;
+    border:1px solid rgb(13, 179, 230);
+    justify-content: center;
+}
+
+.fill-parent {
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
+    
+}
